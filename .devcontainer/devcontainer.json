@@ -1,0 +1,15 @@
+{
+  "name": "ROS-GZ Jazzy-Harmonic",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    // "--privileged",
+    "--network=host",
+    "--device-cgroup-rule=c 226:* rmw"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
+    "source=/dev/dri,target=/dev/dri,type=bind"
+  ]
+}
