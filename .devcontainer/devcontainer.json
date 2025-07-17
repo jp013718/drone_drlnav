@@ -2,7 +2,6 @@
   "name": "ROS-GZ Jazzy-Harmonic",
   "dockerFile": "Dockerfile",
   "runArgs": [
-    // "--privileged",
     "--network=host",
     "--device-cgroup-rule=c 226:* rmw"
   ],
