@@ -3,9 +3,13 @@
 <package format="3">
   <name>drone_drl</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>DRL for UAV using Gazebo</description>
   <maintainer email="jp013718@ohio.edu">ubuntu</maintainer>
   <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>std_srvs</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

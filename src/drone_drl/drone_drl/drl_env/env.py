@@ -19,7 +19,7 @@ MAX_GOAL_DIST = np.sqrt(ARENA_LENGTH**2+ARENA_WIDTH**2+ARENA_HEIGHT**2)
 NUM_SCAN_SAMPLES = 360
 class DRLEnvironment(Node):
   def __init__(self):
-    super.__init__('drl_environment')
+    super().__init__('drl_environment')
     with open('/tmp/drlnav_current_stage.txt', 'r') as f:
       self.stage = int(f.read())
     print(f"Running on stage {self.stage}")
@@ -97,3 +97,17 @@ class DRLEnvironment(Node):
 
   def goal_comm_callback(self, id):
     pass
+
+def main(args=sys.argv[1:]):
+  rclpy.init(args=args)
+  if len(args) == 0:
+    drl_environment = DRLEnvironment()
+  else:
+    rclpy.shutdown()
+    quit("ERROR: wrong number of arguments!")
+  rclpy.spin(drl_environment)
+  drl_environment.destroy()
+  rclpy.shutdown()
+
+if __name__ == "__main__":
+  main()
