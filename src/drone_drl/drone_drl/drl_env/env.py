@@ -8,7 +8,7 @@ from rosgraph_msgs.msg import Clock
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 
-from drone_msgs.srv import DrlStep, Goal
+from drone_msgs.srv import DrlStep, Goal, GoalSpawn
 
 import rclpy
 from rclpy.node import Node
@@ -70,4 +70,30 @@ class DRLEnvironment(Node):
     self.clock_sub = self.create_subscription(Clock, "/clock", self.clock_callback, qos_profile=qos_clock)
     self.obstacle_odom_sub = self.create_subscription(Odometry, 'obstacle/odom', self.obstacle_odom_callback, qos)
     # clients
-    self.task_succeed_clients = [self.create_client(Goal)]
+    self.task_succeed_clients = [self.create_client(Goal, f"agent_{i}/task_succeed") for i in range(self.num_agents)]
+    self.task_fail_clients = [self.create_client(Goal, f"agent_{i}/task_fail") for i in range(self.num_agents)]
+    # servers
+    self.step_comm_servers = [self.create_service(DrlStep, f'agent_{i}/step_comm', partial(self.step_comm_callback, id=i)) for i in range(self.num_agents)]
+    self.goal_comm_servers = [self.create_service(GoalSpawn, f'agent_{i}/goal_comm', partial(self.goal_comm_callback, id=i)) for i in range(self.num_agents)]
+
+
+  def goal_pose_callback(self, id):
+    pass
+
+  def odom_callback(self, id):
+    pass
+
+  def scan_callback(self, id):
+    pass
+
+  def clock_callback(self, id):
+    pass
+
+  def obstacle_odom_callback(self, id):
+    pass
+
+  def step_comm_callback(self, id):
+    pass
+
+  def goal_comm_callback(self, id):
+    pass

@@ -1,4 +1,4 @@
 geometry_msgs/Pose pose
 float32 radius
-bool isRing
+bool is_ring
 ---
