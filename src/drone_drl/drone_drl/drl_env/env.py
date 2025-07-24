@@ -8,7 +8,7 @@ from rosgraph_msgs.msg import Clock
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import LaserScan
 
-from drone_msgs.srv import SphereGoal, DrlStep, Goal
+from drone_msgs.srv import DrlStep, Goal
 
 import rclpy
 from rclpy.node import Node
@@ -33,12 +33,12 @@ class DRLEnvironment(Node):
     self.goal_topic = TOPIC_GOAL
 
     # Initialize environment variables
-    self.goals_pos = [np.zeros(shape=(2))]*self.num_agents
-    self.robots_pos = [np.zeros(shape=(2))]*self.num_agents
-    self.robots_pos_prev = [np.zeros(shape=(2))]*self.num_agents
-    self.robots_heading = [np.zeros(shape=(2))]*self.num_agents
-    self.total_distances = [np.zeros(shape=(2))]*self.num_agents
-    self.robots_tilt = [np.zeros(shape=(2))]*self.num_agents
+    self.goals_pos = [np.zeros(shape=(3))]*self.num_agents
+    self.robots_pos = [np.zeros(shape=(3))]*self.num_agents
+    self.robots_pos_prev = [np.zeros(shape=(3))]*self.num_agents
+    self.robots_heading = [np.zeros(shape=(3))]*self.num_agents
+    self.total_distances = [np.zeros(shape=(3))]*self.num_agents
+    self.robots_tilt = [np.zeros(shape=(3))]*self.num_agents
     
     self.dones = [False]*self.num_agents
     self.succeeds = [False]*self.num_agents
@@ -70,4 +70,4 @@ class DRLEnvironment(Node):
     self.clock_sub = self.create_subscription(Clock, "/clock", self.clock_callback, qos_profile=qos_clock)
     self.obstacle_odom_sub = self.create_subscription(Odometry, 'obstacle/odom', self.obstacle_odom_callback, qos)
     # clients
-    self.task_succeed_clients = [self.create_client(SphereGoal)]
+    self.task_succeed_clients = [self.create_client(Goal)]
