@@ -135,7 +135,7 @@
 
     <include>
       <name>hoop_1</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -16.98806465661015
         8.47685626604629
@@ -148,7 +148,7 @@
 
     <include>
       <name>hoop_2</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -0.30367695791889204
         -14.202845589496082
@@ -161,7 +161,7 @@
 
     <include>
       <name>hoop_3</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -9.314601293771647
         1.055725144016911
@@ -174,7 +174,7 @@
     
     <include>
       <name>hoop_4</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -0.08158775347953906
         -16.36531984515699
@@ -187,7 +187,7 @@
 
     <include>
       <name>hoop_5</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         14.498252267086244
         18.922249473941754
@@ -200,7 +200,7 @@
 
     <include>
       <name>hoop_6</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -10.721045451396783
         -24.757418845833605
@@ -213,7 +213,7 @@
 
     <include>
       <name>hoop_7</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         2.360525835732979
         -22.47382753130831
@@ -226,7 +226,7 @@
 
     <include>
       <name>hoop_8</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         22.231253081956318
         7.071724327553049
@@ -239,7 +239,7 @@
 
     <include>
       <name>hoop_9</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         -8.397071170202292
         14.122241531681432
@@ -252,7 +252,7 @@
 
     <include>
       <name>hoop_10</name>
-      <uri>/drone_drlnav/src/drone_sim/drone_sim/models/hoop/model.sdf</uri>
+      <uri>/drone_drlnav/src/drone_sim/models/hoop/model.sdf</uri>
       <pose>
         8.841747839247404
         23.481122547875586

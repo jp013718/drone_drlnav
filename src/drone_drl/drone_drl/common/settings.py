@@ -4,6 +4,9 @@
 #
 ##########################################################################
 
+# World SDF Filename
+WORLD_SDF = '/drone_drlnav/src/drone_sim/drone_sim/worlds/world.sdf'
+
 # Environment Settings
 EPISODE_TIMEOUT_SECONDS = 120
 THRESHOLD_COLLISION = 0.05
